@@ -1,0 +1,107 @@
+/*
+
+CSS file for quotes.html
+by Darcy Driscoll 2021
+
+*/
+
+/* Individual quotes */
+
+.quotes article p {
+  border: solid white;
+  margin: 0;
+  padding: 1rem;
+}
+
+.quotes article {
+  display: grid;
+  grid-template-columns: 94% 4%;
+  margin-bottom: 2rem;
+  grid-gap: 1%;
+  max-width: 100%;
+}
+
+.quotes article button {
+  /* delete quote button */
+  background-image: url("../images/trash.png");
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-size: contain;
+  background-color: initial;
+  height: 2.5rem;
+  border: none;
+}
+
+.quotes article button:hover {
+  cursor: pointer;
+  background-image: url("../images/trash-hover.png");
+}
+
+/* #1 to #3 rankings */
+
+.rankings {
+  text-align: center;
+}
+
+.rankings p:nth-child(1) {
+  font-size: 3rem;
+  margin-right: 2rem;
+}
+
+.rankings p:nth-child(1) span {
+  margin-right: 2rem;
+  font-size: 4rem;
+}
+
+.rankings p:nth-child(2) {
+  font-size: 2rem;
+  margin-right: 2rem;
+}
+
+.rankings p:nth-child(2) span {
+  margin-right: 2rem;
+  font-size: 2.5rem;
+}
+
+.rankings p:nth-child(3) {
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.rankings p:nth-child(3) span {
+  margin-right: 1.5rem;
+  font-size: 1.8rem;
+}
+
+/* 'Add Quote' text box and button */
+
+.quote-rankings form {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 90% 10%;
+  width: 90%;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.quote-rankings form .quote-input {
+  height: 2.5rem;
+  box-sizing: border-box;
+  border-radius: 1rem 0 0 1rem;
+  border: none;
+  padding: 1rem;
+}
+
+.quote-rankings form .quote-input:focus-visible {
+  outline: none;
+}
+
+.quote-rankings form .add-quote-btn {
+  border: none;
+  border-left: solid;
+}
+
+.quote-rankings form .add-quote-btn:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}

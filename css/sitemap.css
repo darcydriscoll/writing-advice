@@ -1,0 +1,29 @@
+/*
+
+CSS file for sitemap.html
+by Darcy Driscoll 2021
+
+*/
+
+/* define site map list */
+main > ul {
+  font-size: 1.2rem;
+  width: fit-content;
+  width: -moz-fit-content;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+}
+
+main > ul ul {
+  list-style-type: '⮩';
+}
+
+main a {
+  text-decoration: underline;
+}
+
+main a:hover {
+  background-color: var(--selection-colour);
+}

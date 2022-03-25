@@ -1,0 +1,134 @@
+/*
+
+CSS file for all pages.
+by Darcy Driscoll 2021
+
+*/
+
+body {
+  background-color: var(--primary-background);
+  color: var(--font-colour);
+  font-family: Calibri, sans-serif;
+}
+
+main {
+  /* make room for header */
+  margin-top: 90px;
+}
+
+ol {
+  border-left: #4f4d4d;
+  border-left-width: 0.2rem;
+  border-left-style: solid;
+  padding-left: 25px;
+  margin-left: 15px;
+}
+
+p,
+li {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+/* links */
+
+a {
+  text-decoration: none;
+}
+
+/* header, footer */
+
+header {
+  z-index: 2;
+  background-color: black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  /* match width of article */
+  width: 900px;
+  max-width: 90vw;
+
+  /* grid layout */
+  display: grid;
+  grid-template-areas: "title nav";
+  justify-content: center;
+
+  /* stick to top of screen */
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+
+/* title */
+header > a {
+  grid-area: title;
+  display: inline;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: fit-content;
+  width: -moz-fit-content;
+  font-size: 2.3rem;
+  text-decoration: underline;
+  margin-right: 40px; /* separate from nav controls */
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+footer > p {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  display: inline;
+}
+
+footer > iframe {
+  /* Tweet button styling */
+  margin-left: 1rem;
+  position: relative !important;
+  top: 0.4rem;
+}
+
+/* navigation */
+
+nav {
+  grid-area: nav;
+  display: inline;
+}
+
+nav > ul,
+footer > ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+nav > ul {
+  position: relative;
+  top: 3px;
+}
+
+nav > ul > li,
+footer > ul > li {
+  display: inline;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+nav > ul > li > a,
+footer > ul > li > a {
+  padding: 10px 15px;
+  display: inline-block;
+}
+
+/* anchor pseudo selectors */
+
+a:any-link {
+  color: inherit;
+}
+
+header a:hover,
+footer a:hover {
+  background-color: var(--selection-colour);
+}

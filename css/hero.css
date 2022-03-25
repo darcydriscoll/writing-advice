@@ -1,0 +1,20 @@
+/*
+
+CSS file for hero.html
+by Darcy Driscoll 2021
+
+*/
+
+.article-image {
+  /* size */
+  height: 70vh;
+  width: auto;
+
+  /* centre */
+  display: block;
+  margin: 3rem auto auto auto;
+}
+
+.article-image polygon:hover {
+  opacity: 0.3;
+}

@@ -1,0 +1,97 @@
+/*
+
+Alternate CSS file for all pages.
+by Darcy Driscoll 2021
+
+*/
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  background-color: var(--primary-background);
+  grid-gap: 2rem;
+}
+
+main {
+  padding-top: 4rem;
+}
+
+/* header, footer */
+
+footer {
+  font-size: 1.3rem;
+  text-align: right;
+  padding-top: 3rem;
+
+  /* flex layout -- reverse footer list */
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+footer > p {
+  margin-right: 0.4rem;
+  font-family: 'Arapey', serif;
+}
+
+header > a {
+  position: absolute;
+  font-size: 2rem;
+  margin-left: 0.4rem;
+  font-family: 'Caveat', serif;
+}
+
+header > a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+/* navigation */
+
+header nav {
+  padding-top: 3rem;
+}
+
+footer ul {
+  padding-left: 0;
+  padding-right: 0.5rem;
+}
+
+header nav ul {
+  padding-left: 0.5rem;
+}
+
+footer li {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+footer li,
+header nav li {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  text-decoration: underline;
+  width: fit-content;
+  font-family: 'Arapey', serif;
+}
+
+footer li:nth-child(2n),
+header li:nth-child(2n) {
+  /* hide the little circles between the gaps of nav items */
+  display: none;
+}
+
+footer li:hover,
+header li:hover {
+  text-decoration: none;
+  color: var(--selection-colour);
+}
+
+/* twitter button */
+
+footer > iframe {
+  position: relative !important;
+  right: 0.4rem;
+}

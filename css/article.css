@@ -1,0 +1,54 @@
+/*
+
+CSS file for articles
+by Darcy Driscoll 2021
+
+*/
+
+/* heading colours */
+
+.green-heading {
+  background-color: var(--secondary-colour);
+}
+
+.red-heading {
+  background-color: var(--tertiary-colour);
+}
+
+.blue-heading {
+  background-color: var(--quaternary-colour);
+}
+
+/* article content */
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+  background-color: #0e6e6e;
+  padding: 10px;
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  max-width: 90vw;
+  width: 900px;
+}
+
+main p {
+  font-family: Merriweather, Georgia, serif;
+}
+
+main h2 {
+  padding: 7px;
+
+  /* contain only the heading text */
+  width: max-content;
+}
+
+main img {
+  width: 100%;
+  display: block;
+}

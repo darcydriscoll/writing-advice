@@ -1,0 +1,76 @@
+/*
+
+CSS file for advice.html
+by Darcy Driscoll 2021
+
+*/
+
+/* GALLERY STYLING */
+
+/* parent element */
+#gallery {
+  display: grid;
+  grid-template-areas:
+    'title title title'
+    'prev image next'
+    'caption caption caption';
+  grid-template-rows: 5rem auto auto;
+  grid-template-columns: 5rem auto 5rem;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+#gallery > div {
+  height: 40vh;
+  display: flex;
+}
+
+/* gallery image */
+#gallery > div > img {
+  display: block;
+  margin: auto;
+  grid-area: image;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* previous and next buttons */
+#gallery > button {
+  border: none;
+  background: none;
+  height: auto;
+  margin: auto;
+  cursor: pointer;
+}
+
+/* previous and next button */
+#gallery > #gallery-previous {
+  grid-area: prev;
+  transform: rotate(180deg); /* flip arrow to left */
+}
+
+#gallery > #gallery-next {
+  grid-area: next;
+}
+
+#gallery > button > img:hover {
+  transform: scale(1.2);
+}
+
+#gallery > button:focus {
+  outline: none;
+}
+
+#gallery h2 {
+  text-align: center;
+  padding: 0;
+  width: auto;
+  grid-area: title;
+}
+
+#gallery p {
+  grid-area: caption;
+  text-align: center;
+  font-style: italic;
+}

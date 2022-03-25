@@ -1,0 +1,14 @@
+/*
+
+CSS variables for alternate site colours.
+by Darcy Driscoll 2021
+
+*/
+
+/* attach to body of each .html */
+.main-palette {
+  --primary-background: #faf5f2;
+  --font-colour: black;
+  --primary-colour: #c5a5a5;
+  --selection-colour: #6e6eff;
+}

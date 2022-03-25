@@ -1,0 +1,125 @@
+/*
+
+Alternate CSS file for index.html.
+by Darcy Driscoll 2021
+
+*/
+
+/* general */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  /* hide heading but don't remove it (for screen reader users) */
+  position: absolute;
+  right: 100vw;
+}
+
+/* article boxes */
+
+main article {
+  border-left: dashed transparent;
+  border-right: dashed transparent;
+  border-top: dashed transparent;
+  border-bottom: dashed var(--primary-colour);
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-bottom: 2rem;
+
+  /* grid layout */
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "image p"
+    "image p";
+  grid-template-columns: 1fr 7fr;
+}
+
+main article:hover {
+  border: dashed var(--selection-colour);
+  color: var(--selection-colour);
+}
+
+main article > h2 {
+  grid-area: title;
+  margin-top: 0;
+  font-family: KoHo, sans-serif;
+}
+
+main article > div {
+  grid-area: image;
+}
+
+main article > div > img {
+  width: 100%;
+}
+
+main article > p {
+  grid-area: p;
+  margin: 0;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  font-family: 'Arapey', serif;
+}
+
+/* first article is highlighted */
+
+main a:first-of-type > article {
+  grid-template-areas:
+    "image"
+    "title"
+    "p";
+  grid-template-columns: auto;
+}
+
+main a:first-of-type > article:hover {
+  border-bottom: dashed var(--selection-colour);
+  color: var(--selection-colour);
+}
+
+main a:first-of-type > article > h2 {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+main a:first-of-type > article > div {
+  width: fit-content;
+  margin: auto;
+}
+
+main a:first-of-type > article > div > img {
+  width: 50%;
+  margin: auto;
+  display: block;
+}
+
+main a:first-of-type > article > p {
+  text-align: center;
+}
+
+/* style swap button */
+
+aside {
+  /* put at bottom-right corner of screen */
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+}
+
+aside > button {
+  cursor: pointer;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+  border: solid lightgrey 0.1rem;
+  box-shadow: 1px 3px 5px 0 #0000006e;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+
+aside > button:hover {
+  background-color: lightgrey;
+}

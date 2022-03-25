@@ -1,0 +1,28 @@
+/*
+
+CSS file for mckee.html
+by Darcy Driscoll 2021
+
+*/
+
+/* triangle image */
+#mckee-triangle {
+  display: block;
+  width: 35rem;
+  height: 30rem;
+  margin: auto;
+
+  /* background image */
+  background-image: url("../images/triangle.png");
+  background-size: 100% 100%;
+}
+
+/* movable circle */
+#mckee-circle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--mckee-colour);
+  position: relative;
+  cursor: grab;
+}

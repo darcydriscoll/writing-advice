@@ -1,0 +1,19 @@
+/*
+
+CSS variables for site colours.
+by Darcy Driscoll 2021
+
+*/
+
+/* attach to body of each .html */
+.main-palette {
+  --primary-background: black;
+  --font-colour: white;
+  --primary-colour: #0e6e6e; /* teal */
+  --secondary-colour: #096e35; /* green */
+  --tertiary-colour: #6e2019; /* gritty red */
+  --quaternary-colour: #143e6e; /* dark blue */
+  --selection-colour: #2c6471; /* dark teal (link selections) */
+  --form-required-colour: red; /* required asterisk on forms */
+  --mckee-colour: #4dc4df;
+}

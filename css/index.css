@@ -1,0 +1,129 @@
+/*
+
+CSS file for index.html.
+by Darcy Driscoll 2021
+
+*/
+
+main {
+  /* add pillar behind articles to draw eye downwards */
+  background: linear-gradient(to right, transparent 45%, #0e6e6e 45% 55%, transparent 55% 100%);
+  margin-top: 120px;
+  padding-bottom: 40px;
+  padding-top: 10px;
+}
+
+h1 {
+  /* hide heading but don't remove it (for screen reader users) */
+  position: absolute;
+  right: 100vw;
+}
+
+/* article tabs */
+
+article img {
+  width: 11rem;
+  height: 11rem;
+
+  /* create circle around image */
+  border-radius: 50%;
+  border-style: solid;
+  border-color: white;
+  border-width: 0.5rem;
+
+  /* fill in any remaining negative space between image and border */
+  background-color: white;
+}
+
+/* create circle with bottom-right notch around image's border
+   fills in gap between image and rest of article tab */
+.blurb-notch {
+  grid-area: image;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50% 50% 0 50%;
+  border-style: solid;
+  border-color: white;
+  background-color: white;
+  z-index: 1;
+}
+
+main > a {
+  display: block;
+  margin: auto;
+  width: fit-content;
+  width: -moz-fit-content;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+/* make article tab grow when hovered */
+main > a:hover {
+  transform: scale(1.05);
+}
+
+article {
+  width: 25vw;
+  min-width: 40rem;
+  color: black;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.4);
+
+  /* define grid layout of article tab */
+  display: grid;
+  grid-template-areas:
+    "image empty"
+    "image title"
+    "image blurb";
+  justify-content: center;
+  grid-template-rows: 18fr auto 34fr;
+}
+
+article h2,
+article p {
+  margin: 0;
+  width: 100%;
+
+  /* fill in small remaining gap between image and rest of tab */
+  position: relative;
+  right: 25px;
+  padding-left: 25px;
+}
+
+article h2 {
+  grid-area: title;
+  font-size: 1.7rem;
+  background-color: white;
+  width: 100%;
+  padding-top: 10px;
+  z-index: 0;
+}
+
+article p {
+  grid-area: blurb;
+  background-color: white;
+  font-size: 1.2rem;
+  z-index: 0;
+}
+
+/* style swap button */
+
+aside {
+  /* put at bottom-right corner of screen */
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+}
+
+aside > button {
+  cursor: pointer;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+  border: solid lightgrey 0.1rem;
+  box-shadow: 1px 3px 5px 0 #0000006e;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+
+aside > button:hover {
+  background-color: lightgrey;
+}

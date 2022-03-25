@@ -1,0 +1,89 @@
+/*
+
+CSS file for feedback.html.
+by Darcy Driscoll 2021
+
+*/
+
+/* keep font-size in line with rest of website */
+label,
+legend,
+input[type="submit"] {
+  font-size: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  display: block;
+}
+
+textarea {
+  display: block;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 125px;
+}
+
+/* used for mandatory asterisk indicators */
+.required-control {
+  color: var(--form-required-colour);
+}
+
+/* radios */
+
+fieldset {
+  margin-bottom: 10px;
+}
+
+/* gender radio buttons */
+
+.genders {
+  margin-bottom: 10px;
+}
+
+.genders label {
+  margin-bottom: 0;
+}
+
+.genders input {
+  /* so the buttons and their labels are on the same line */
+  display: inline;
+}
+
+/* scale radio buttons */
+
+.scale {
+  text-align: center;
+}
+
+.scale label {
+  /* so the labels and the buttons are on the same line */
+  display: inline;
+}
+
+/* hide labels of middle buttons because they are unnecessary for visually able people
+   not removed entirely though, for screen reader users */
+.scale label:nth-child(3),
+.scale label:nth-child(5) {
+  position: absolute;
+  right: 100vw;
+}
+
+.scale input {
+  /* so the buttons are on the same line */
+  display: inline;
+}
+
+/* these two rules create distance between the left- and right-most labels
+   and their respective buttons */
+.scale label:nth-child(2) input {
+  margin-left: 10px;
+}
+
+.scale label:nth-child(7) input {
+  margin-right: 10px;
+}

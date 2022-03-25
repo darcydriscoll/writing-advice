@@ -1,0 +1,27 @@
+/*
+
+CSS file for sourcelog.html
+by Darcy Driscoll 2021
+
+*/
+
+table {
+  margin: auto;
+}
+
+td {
+  border: 1px solid white;
+}
+
+thead {
+  background-color: white;
+  color: black;
+}
+
+table a {
+  text-decoration: underline;
+}
+
+table a:hover {
+  background-color: var(--selection-colour);
+}
